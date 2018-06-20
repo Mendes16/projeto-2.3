@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Acessibilidade</title>
+    <link href="Views/css/index.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8"/>
+
+</head>
+
+<body>
+<div class="conteudo">
+    <header>
+        <!--<img  id="logo" src="Views/imagens/dia-dos-deficientes-fc3adsicos.jpg" width="200" height="100"/> -->
+
+        <div id="divBusca">
+            <input type="text" id="txtBusca" placeholder="Buscar..."/>
+         <!--   <img src="Views/imagens/1485477207-magnifier_78608.png" id="btnBusca" alt="Buscar" border="0"/> -->
+        </div>
+
+        <!--  Se põe DIV em lugar de SPAN não se alinha (inline) com botões do menu -->
+
+         <div class="menu">
+             <nav><a href="#">Home</a></nav>
+             <nav><a href="#">Somos</a></nav>
+             <nav><a href="#">Empresas</a></nav>
+             <nav><a href="../Projeto/login.html">Login</a></nav>
+
+         </div>
+     </header>
+
+            <!-- Foi necessário criar esta DIV para que funcione o Flex e coloque lado a lado a Section e o Aside
+
+            <aside>
+                <h2>Título do aside...</h2>
+                <p>Isso é um modelo de como fica uma página de internet no layout responsive... blá...blá...blá...</p>
+            </aside>
+            -->
+        </div>
+     <div id="map"></div>
+        <script>
+            function initMap() {
+                var joinville = {lat: -26.3051, lng: -48.8461};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 12,
+                    center: joinville
+                });
+                var marker = new google.maps.Marker({
+                    position: joinville,
+                    map: map
+                });
+            }
+        </script>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApcZFMj56_rOAfTJJKaDqLBQ8G0drY56c&callback=initMap">
+        </script>
+
+    <footer>Rodapé da página | <a href="#">test</a> </footer>
+</div>
+</body>
+
+</html>
